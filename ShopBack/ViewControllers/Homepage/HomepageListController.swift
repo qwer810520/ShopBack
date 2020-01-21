@@ -46,7 +46,6 @@ class HomepageListController: CollectionIGListController {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-//    APIManager.shared.fetchHomepageTrip()
   }
 
   // MARK: - Private Methods
@@ -100,7 +99,7 @@ extension HomepageListController {
     switch storyType {
       case .product:
         return VerticalSectionController()
-      case .article, .banner:
+      case .trip, .article, .banner:
         return HorizontalSectionViewController()
       default:
         return ListSectionController()
